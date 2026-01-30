@@ -1,0 +1,36 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "title",
+          "source",
+          "published_at",
+          "author",
+          "summary",
+          "tags",
+          "keywords_matched",
+          "sentiment_score",
+          "url"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "title": { "label": "Title", "format": "text" },
+          "source": { "label": "Source", "format": "text" },
+          "published_at": { "label": "Published at", "format": "text" },
+          "author": { "label": "Author", "format": "text" },
+          "summary": { "label": "Summary", "format": "text" },
+          "tags": { "label": "Tags", "format": "text" },
+          "keywords_matched": { "label": "Keywords matched", "format": "text" },
+          "sentiment_score": { "label": "Sentiment", "format": "text" },
+          "url": { "label": "URL", "format": "link" }
+        }
+      }
+    }
+  }
+}

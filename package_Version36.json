@@ -1,0 +1,21 @@
+{
+  "name": "climate-news-aggregator-scraper",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Climate change news aggregator scraper (RSS + site crawling + optional sentiment + full article storage)",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "apify": "^3.4.2",
+    "crawlee": "^3.13.8",
+    "rss-parser": "^3.12.0",
+    "sentiment": "^5.0.2",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "author": "It's not you it's me",
+  "license": "ISC"
+}

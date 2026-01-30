@@ -1,0 +1,13 @@
+{
+  "actorKeyValueStoreSchemaVersion": 1,
+  "title": "Key-Value store layout",
+  "description": "Store full article text or raw article JSON keyed by canonicalized URL.",
+  "collections": {
+    "articles": {
+      "title": "Articles",
+      "description": "Full article JSON/text keyed by articles/<encoded-url>",
+      "keyPrefix": "articles/",
+      "contentTypes": ["application/json", "text/plain"]
+    }
+  }
+}

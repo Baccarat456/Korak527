@@ -1,0 +1,18 @@
+{
+  "actorSpecification": 1,
+  "name": "Climate change news aggregator scraper",
+  "title": "Climate change news aggregator scraper",
+  "description": "Aggregates climate change news from news sites, RSS/Atom feeds, and topic pages; extracts metadata, snippets, tags, optional sentiment, and stores full articles for downstream use.",
+  "version": "0.0",
+  "meta": {
+    "templateId": "ai-generated-actor",
+    "generatedBy": "Gpt-4o-mini"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json",
+    "keyValueStore": "./kv_schema.json"
+  },
+  "dockerfile": "../Dockerfile"
+}

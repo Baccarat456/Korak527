@@ -1,0 +1,77 @@
+{
+  "title": "Input schema of the Climate change news aggregator scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "rssFeeds": {
+      "title": "RSS / Atom feeds",
+      "type": "array",
+      "description": "Feed URLs to parse for news items (preferred).",
+      "editor": "requestListSources",
+      "prefill": [
+        { "url": "https://www.theguardian.com/environment/climate-crisis/rss" },
+        { "url": "https://www.reuters.com/rssFeed/environmentNews" }
+      ]
+    },
+    "startUrls": {
+      "title": "Start URLs (site pages)",
+      "type": "array",
+      "description": "Optional listing or topic pages to crawl (news sections, topic pages, pressrooms).",
+      "editor": "requestListSources",
+      "prefill": [
+        { "url": "https://www.climatechangenews.com/" }
+      ]
+    },
+    "keywords": {
+      "title": "Keywords / Topics",
+      "type": "array",
+      "description": "Keywords to match against articles (e.g., 'sea level', 'carbon capture'). Used to tag results.",
+      "prefill": [
+        "climate",
+        "sea level",
+        "carbon",
+        "mitigation",
+        "adaptation",
+        "greenhouse gas"
+      ]
+    },
+    "maxRequestsPerCrawl": {
+      "title": "Max Requests per Crawl",
+      "type": "integer",
+      "default": 500
+    },
+    "useBrowser": {
+      "title": "Use Playwright (for JS-heavy pages)",
+      "type": "boolean",
+      "default": false
+    },
+    "deduplicateBy": {
+      "title": "Deduplicate by",
+      "type": "string",
+      "description": "Field used to deduplicate items before saving (url | title).",
+      "default": "url"
+    },
+    "extractFullArticle": {
+      "title": "Extract full article text",
+      "type": "boolean",
+      "description": "If true, try to extract main article body and store it in Key-Value Store.",
+      "default": true
+    },
+    "computeSentiment": {
+      "title": "Compute sentiment score",
+      "type": "boolean",
+      "description": "If true, compute a simple sentiment score for summary/text.",
+      "default": true
+    },
+    "followInternalOnly": {
+      "title": "Follow internal links only",
+      "type": "boolean",
+      "default": true
+    },
+    "concurrency": {
+      "title": "Concurrency",
+      "type": "integer",
+      "default": 10
+    }
+  }
+}
